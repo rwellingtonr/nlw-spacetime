@@ -1,0 +1,33 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Wellington Leardini Ramos",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx src/server.ts",
+    "prebuild": "npx prisma migrate deploy",
+    "build": "tsup"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.59.8",
+    "eslint": "^8.41.0",
+    "prisma": "^4.14.1",
+    "tsup": "^6.7.0",
+    "tsx": "^3.12.7",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.3.0",
+    "@fastify/helmet": "^10.1.1",
+    "@prisma/client": "^4.14.1",
+    "dotenv": "^16.0.3",
+    "fastify": "^4.17.0",
+    "zod": "^3.21.4"
+  }
+}
