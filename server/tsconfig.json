@@ -1,22 +1,24 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": ["ES2022"],
-    "module": "commonjs",
+    "module": "CommonJS",
+    "lib": ["ES2022", "DOM"],
     "rootDir": "./src",
     "baseUrl": ".",
     "outDir": "./dist",
     "moduleResolution": "node",
     "allowJs": false,
     "resolveJsonModule": true,
+    "removeComments": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
+    "strict": false,
     "skipLibCheck": true,
+    "noEmit": true /* Disable emitting files from a compilation. */,
     "paths": {
       "~/*": ["./src/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
 }
